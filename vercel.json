@@ -1,0 +1,18 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "npm install && npm install --prefix Frontend",
+  "buildCommand": "npm run build",
+  "outputDirectory": "Frontend/dist",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api"
+    }
+  ],
+  "functions": {
+    "api/index.mjs": {
+      "memory": 1024,
+      "maxDuration": 30
+    }
+  }
+}

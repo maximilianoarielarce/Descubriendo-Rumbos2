@@ -1,0 +1,71 @@
+//import { useState } from 'react';
+import './App.css'
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
+import { /* BrowserRouter, */ HashRouter, Route, Routes } from 'react-router'
+
+/* Barra de navegación */
+import Navbar from './componentes/Navbar'
+
+/* Componentes a rutear */
+import Index from './componentes/INICIO/Index'
+import { Index as Alta } from './componentes/ALTA/Index'
+import { Index as Carrito } from './componentes/CARRITO/Index'
+import Contacto from './componentes/CONTACTO/Index'
+import nosotros from './componentes/NOSOTROS/Index'
+import { Index as Otra } from './componentes/OTRA/Index'
+import Footer from './componentes/Footer'
+
+
+
+function App() {
+  return (
+    <>
+      {/* <BrowserRouter> */}
+      <HashRouter>
+        <header>
+  <Navbar />
+  <div className="logo-contenedor">
+    <img 
+      src="/public/Descubriendo rumbos logo-Photoroom.png" 
+      alt="Logo" 
+      className="logo-img"
+    />
+  </div>
+
+  <div id="barra-busqueda">
+    <form action="#">
+     {/*  <label htmlFor="buscar">Buscar</label> */}
+      <input type="text" />
+      <input type="submit" value="Buscar" />
+    </form>
+  </div>
+
+</header>
+
+
+        <main>
+          <Routes>
+            {/* definición de ruta y componente raíz */}
+            <Route index element={<Index />} />
+            
+            {/* Resto de rutas y componentes asociados */}
+            <Route path="/Index" element={<Index />} />
+            <Route path="/alta" element={<Alta />} />
+            <Route path="/carrito" element={<Carrito />} />
+            <Route path="/contacto" element={<Contacto />} />
+            <Route path="/Nosotros" element={<Nosotros />} />
+            <Route path="/otra" element={<Otra />} />
+
+            {/* definición de rutas no existentes * y su componente default */}
+            <Route path="*" element={<Index />} />
+          </Routes>
+        </main>
+      </HashRouter>
+      {/* </BrowserRouter> */}
+    </>
+  )
+}
+
+export default App

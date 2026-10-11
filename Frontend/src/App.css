@@ -1,0 +1,70 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+
+header {
+  text-align: center;
+}
+
+.logo-contenedor {
+    padding: 0.7em 0.3em 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-surface);
+}
+
+
+.logo-img {
+    max-height: 64px;
+  max-width: 100%;
+    width: auto; 
+}
+
+.logo-trigger {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.migas-pan {
+  min-height: 34px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--color-nav);
+  color: #fff;
+  font-size: 12px;
+  text-align: left;
+}
+
+.migas-pan a {
+  color: #c5d9ff;
+  text-decoration: none;
+}
+
+.migas-pan a:hover {
+  text-decoration: underline;
+}
+
+.migas-pan span[aria-hidden="true"] {
+  color: #a9b9d8;
+}

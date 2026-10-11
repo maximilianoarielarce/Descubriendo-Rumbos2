@@ -1,0 +1,32 @@
+[
+	{
+		"fyh": "28/10/2025, 08:57:11",
+		"pedido": [
+			{
+				"nombre": "Mouse",
+				"precio": 543,
+				"stock": 11,
+				"marca": "Genius",
+				"categoria": "PC",
+				"detalles": "Color negro",
+				"foto": "https://www.venex.com.ar/products_images/1601917920_unnamed.jpg",
+				"envio": false,
+				"id": "3",
+				"cantidad": 2
+			},
+			{
+				"nombre": "Memoria",
+				"precio": 3456,
+				"stock": 77,
+				"marca": "Kingston",
+				"categoria": "PC",
+				"detalles": "DDR-5",
+				"foto": "https://i.blogs.es/6135c0/ram/450_1000.png",
+				"envio": false,
+				"id": "2",
+				"cantidad": 4
+			}
+		],
+		"id": "1"
+	}
+]

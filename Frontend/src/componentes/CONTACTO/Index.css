@@ -1,0 +1,80 @@
+/* Contenedor principal */
+.contacto-container {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+.titulo-form {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #245fa8;
+  margin-bottom: 40px;
+}
+
+
+/* Formulario */
+.form-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Etiquetas */
+.form-contacto label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+/* Inputs */
+.form-contacto input {
+  width: 100%;
+  background-color: #f3f3f3;
+  border: 1px solid #888;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* Textarea */
+.form-contacto textarea {
+  width: 100%;
+  background-color: #f3f3f3;
+  border: 1px solid #888;
+  min-height: 120px;
+  padding: 10px;
+  border-radius: 4px;
+  resize: none;
+}
+
+/* Botón */
+.form-contacto button {
+  width: 140px;
+  padding: 10px;
+  background-color: #0066cc;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.form-contacto button:hover {
+  background-color: #004c99;
+}
+
+/* Errores */
+.error-detail {
+  color: red;
+  font-size: 14px;
+}
+
+/* Resultado */
+#resultado {
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+

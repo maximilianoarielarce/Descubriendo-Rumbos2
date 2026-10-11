@@ -1,0 +1,30 @@
+{
+  "name": "appecommerce",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "20.x"
+  },
+  "scripts": {
+    "install:all": "npm install && npm install --prefix Frontend",
+    "build": "cd Frontend && npm run build",
+    "dev:backend": "nodemon Backend/index.js",
+    "dev:frontend": "cd Frontend && npm run dev",
+    "start:backend": "node Backend/index.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.10.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "joi": "^18.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mercadopago": "^2.10.0",
+    "mongodb": "^6.21.0",
+    "multer": "^2.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}

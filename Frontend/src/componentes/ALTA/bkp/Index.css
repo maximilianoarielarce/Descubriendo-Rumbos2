@@ -1,0 +1,151 @@
+.alta {
+    height: auto;
+    padding: 20px;
+    background-color: #ddd;
+}
+
+.alta h1 {
+    text-align: center;
+}
+
+/*  ------- Maquetado del formulario ------ */
+.alta .alta-form {
+    background-color: #b63625;
+    width: 80%;
+    margin: 20px auto;
+    padding: 30px;
+    color: white;
+    border-radius: 20px;
+    border: 1px dashed yellow;
+
+    /* display: none; */  /* sólo para pruebas */
+}
+
+.alta .input-group {
+    /* border: 1px solid cyan; */
+    padding: 3px;
+    text-align: center;
+}
+
+.alta label {
+    color: #badc58;
+    text-transform: capitalize;
+    display: block;
+    margin-bottom: 5px;
+    /* border: 1px solid yellow; */
+}
+
+.alta label[for="envio"] {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.alta form button {
+    /* text-align: center; */
+    display: block;
+    margin: 15px auto;
+
+    height: 40px;
+    width: 40%;
+    background-color:#6ab04c;
+    color: #130f40;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.alta form button:disabled {
+    opacity: 0.5;
+}
+
+.alta input {
+    width: 70%;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color:#95afc0;
+}
+
+.alta input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+/*  ------- Maquetado de la tabla ------ */
+.alta th, .alta td {
+    border: 1px solid black;
+    width: 100px;
+    height: 40px;
+    padding: 10px;
+}
+
+.alta table {
+    border-collapse: collapse;
+    margin: 5px auto;
+    /* border: 1px solid magenta; */
+}
+
+.alta th {
+    text-transform: uppercase;
+    background-color: #111;
+    color: white;
+    font-size: 20px;
+}
+
+.alta td {
+    font-size: 18px;
+}
+
+.alta h2 {
+    text-align: center;
+}
+
+
+/* ------------------------------------ */
+.alta table .borrar-editar {
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.alta table button.btnBorrar {
+    background-color: crimson;
+    color: white;
+}
+
+.alta table button.btnBorrar:disabled {
+    opacity: 0.5;
+}
+
+.alta table button.btnEditar {
+    background-color: gold;
+    color: #222;
+}
+
+.alta table button.btnCancelar {
+    background-color: #222;
+    color: gold;
+}
+
+.alta .btnActualizar {
+    background-color:gold;
+    color: #222; 
+}
+
+.alta .btnAgregar {
+    background-color:#6ab04c;
+    color: #130f40;    
+}
+
+.alta .table-responsive {
+    overflow: auto;
+}
+
+.alta .error-detail {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: pink;
+}

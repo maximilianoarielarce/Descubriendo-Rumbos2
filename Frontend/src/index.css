@@ -1,0 +1,335 @@
+/* ============================================
+   Descubriendo Rumbos — Design tokens
+   ============================================ */
+:root {
+    --color-bg: #FBF7F1;
+    --color-surface: #FFFFFF;
+    --color-ink: #1C2B3A;
+    --color-ink-soft: #52606F;
+
+    --color-primary: #1E4F7B;
+    --color-primary-dark: #163B5C;
+    --color-primary-soft: #E7EEF4;
+    --color-nav: #2d5c9f; /* mismo azul original del footer, sin tocarlo */
+
+    --color-accent: #C97A3D;
+    --color-accent-dark: #A85F27;
+
+    --color-line: #E4DCCB;
+
+    --font-display: "Fraunces", Georgia, serif;
+    --font-body: "Open Sans", sans-serif;
+
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    --shadow-card: 0 10px 30px -12px rgba(28, 43, 58, 0.22);
+    --shadow-float: 0 18px 40px -16px rgba(28, 43, 58, 0.32);
+}
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    background-color: var(--color-bg);
+}
+
+
+#logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    padding: 0.3em;
+}
+
+
+#logo img {
+    max-height: 50px;
+    width: auto; 
+    display: block; 
+}
+
+
+
+body, ul, h3, h1, p {
+    margin: 0;
+}
+
+
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-ink);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    color: var(--color-ink);
+}
+
+
+/* ============================================
+   Encabezado / navegación
+   ============================================ */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: var(--color-surface);
+    box-shadow: 0 1px 0 var(--color-line);
+}
+
+header nav {
+    background-color: var(--color-nav);
+    display: flex;
+    justify-content: center;
+    padding: 0.6em 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2.5em;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: rgba(255, 255, 255, 0.92);
+    text-decoration: none;
+    font-size: 0.92em;
+    letter-spacing: 0.01em;
+    display: flex;
+    align-items: center;
+    gap: 0.45em;
+    padding: 0.35em 0.6em;
+    border-radius: 999px;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+header nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+}
+
+header nav ul li a i {
+    font-size: 1.05em;
+    color: var(--color-accent);
+}
+
+header nav ul li a:hover i {
+    color: #fff;
+}
+
+/* Acceso al panel de administración: discreto a propósito,
+   no debe llamar la atención de un visitante común */
+header nav ul li.navbar-item-admin a {
+    padding: 0.35em 0.5em;
+    opacity: 0.55;
+}
+
+header nav ul li.navbar-item-admin a i {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95em;
+}
+
+header nav ul li.navbar-item-admin a:hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+/* ============================================
+   Barra de búsqueda (hero)
+   ============================================ */
+#barra-busqueda {
+    width: 100%;
+    padding: 2.6em 1em 3.2em;
+    background:
+        radial-gradient(ellipse at top, rgba(30, 79, 123, 0.08), transparent 60%),
+        var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4em;
+    text-align: center;
+}
+
+#barra-busqueda form {
+    width: min(680px, 92%);
+    background-color: var(--color-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-float);
+    padding: 0.6em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+#barra-busqueda form label {
+    background-color: transparent;
+    color: var(--color-ink-soft);
+    width: auto;
+    height: auto;
+    line-height: normal;
+    text-align: left;
+    margin-right: 0;
+    padding: 0 0.4em;
+    font-size: 0.85em;
+}
+
+#barra-busqueda form input {
+    flex: 1;
+    min-width: 180px;
+    width: auto;
+    height: 42px;
+    color: var(--color-ink);
+    margin: 0;
+    border: none;
+    background-color: var(--color-primary-soft);
+    border-radius: var(--radius-md);
+    padding: 0 0.9em;
+    font-family: var(--font-body);
+    font-size: 0.95em;
+}
+
+#barra-busqueda form input:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 1px;
+}
+
+#barra-busqueda form input[type="submit"] {
+    background-color: var(--color-accent);
+    color: #fff;
+    width: auto;
+    height: 42px;
+    padding: 0 1.6em;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+    flex: none;
+}
+
+#barra-busqueda form input[type="submit"]:hover {
+    background-color: var(--color-accent-dark);
+}
+
+
+/* Mis modificaciones */
+
+footer {
+  background-color: #2d5c9f;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding: 2em 1em 1em;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2em;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-columna {
+  flex: 1 1 200px;
+}
+
+.footer-columna h4 {
+  margin-bottom: 0.8em;
+  font-size: 1.1em;
+}
+
+.footer-columna ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-columna li {
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+}
+
+.footer-columna li img {
+  width: 20px;
+  margin-right: 0.5em;
+}
+
+.footer-columna a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-columna a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.7em;
+  margin: 1em 0;
+}
+
+.social-icons i {
+  font-size: 1.3em;
+}
+
+
+.footer-legal {
+  text-align: left;
+  padding-top: 1em;
+  font-size: 0.85em;
+}
+
+.footer-columna h4 {
+  margin-bottom: 0.8em;
+  /* text-transform: uppercase; */
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
+}
+
+.footer-columna p,
+.footer-columna span,
+.footer-columna li {
+  color: white;
+}
+
+
+
+
+/* -------------/*
+
+
+ /* footer {
+    background-color:blueviolet;
+    color: white;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 11px; */
+
+/* 
+ .centrar {
+    text-align: center;
+} */

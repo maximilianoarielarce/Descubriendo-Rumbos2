@@ -1,0 +1,218 @@
+.carrito {
+    min-height: 60vh;
+    padding: 3em 1.5em 4em;
+    background-color: var(--color-bg);
+}
+
+.carrito-header {
+    max-width: 680px;
+    margin: 0 auto 2em;
+    text-align: center;
+}
+
+.carrito-header .eyebrow {
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: var(--color-accent-dark);
+    margin-bottom: 0.5em;
+}
+
+.carrito-header h1 {
+    font-size: clamp(1.5em, 3vw, 2.1em);
+    margin-bottom: 0.35em;
+}
+
+.carrito-subtitle {
+    color: var(--color-ink-soft);
+    font-size: 0.95em;
+}
+
+.carrito-body {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* ----- Cartel de resultado de pago ----- */
+.carrito-status {
+    width: min(520px, 100%);
+    margin: 0 auto 2em;
+    padding: 1.2em 1.6em;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    text-align: center;
+}
+
+.carrito-status h2 {
+    margin-bottom: 0.6em;
+    font-size: 1.2em;
+}
+
+.carrito-status ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    font-size: 0.88em;
+}
+
+.carrito-status ul span {
+    font-weight: 600;
+    margin-right: 0.4em;
+}
+
+.carrito-status.ok {
+    background-color: #E4F1E8;
+    color: #2C7A46;
+}
+
+.carrito-status.error {
+    background-color: #F8E3E1;
+    color: #B3261E;
+}
+
+/*  ------- Botones superiores ------ */
+.carrito .carrito_borrar_pedir {
+    margin: 0 auto 1.2em;
+    display: block;
+
+    height: 42px;
+    padding: 0 1.6em;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.92em;
+    cursor: pointer;
+    transition: background-color 0.25s ease, opacity 0.2s ease;
+}
+
+.carrito .carrito_borrar {
+    background-color: transparent;
+    color: #B3261E;
+    border: 1px solid #E3B3AE;
+}
+
+.carrito .carrito_borrar:hover {
+    background-color: #F8E3E1;
+}
+
+.carrito .carrito_pedir {
+    background-color: var(--color-accent);
+    color: white;
+    width: min(280px, 100%);
+}
+
+.carrito .carrito_pedir:hover {
+    background-color: var(--color-accent-dark);
+}
+
+/*  ------- Tabla ------ */
+.carrito .table-responsive {
+    overflow: auto;
+    margin-bottom: 1.4em;
+}
+
+.carrito table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: var(--color-surface);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+}
+
+.carrito th, .carrito td {
+    border-bottom: 1px solid var(--color-line);
+    padding: 0.8em 1em;
+    text-align: left;
+}
+
+.carrito th {
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    background-color: var(--color-primary-dark);
+    color: white;
+    font-size: 0.76em;
+    white-space: nowrap;
+}
+
+.carrito td {
+    font-size: 0.92em;
+    color: var(--color-ink);
+}
+
+.carrito td img {
+    border-radius: 8px;
+    display: block;
+}
+
+.carrito .fila-total th {
+    background-color: var(--color-primary-soft);
+    color: var(--color-primary-dark);
+    font-size: 0.95em;
+}
+
+.carrito table button.btnBorrar {
+    height: 36px;
+    padding: 0 0.9em;
+    border-radius: var(--radius-md);
+    font-size: 0.82em;
+    font-weight: 600;
+    border: none;
+    background-color: #C0392B;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.carrito table button.btnBorrar:hover {
+    opacity: 0.88;
+}
+
+/* ---------------------------------------- */
+.carrito .stepper {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+    background-color: var(--color-primary-soft);
+    border-radius: 999px;
+    padding: 0.25em 0.5em;
+}
+
+.carrito table button.btnIncDec {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    font-size: 1em;
+    line-height: 1;
+    border: none;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.carrito table button.btnIncDec:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.carrito .sin-datos {
+    text-align: center;
+    color: var(--color-ink-soft);
+    font-weight: 400;
+    font-size: 1.05em;
+    padding: 2em 0;
+}
+
+.carrito #wallet-container {
+    width: min(320px, 100%);
+    margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+    .carrito th, .carrito td {
+        padding: 0.6em 0.7em;
+        font-size: 0.85em;
+    }
+}

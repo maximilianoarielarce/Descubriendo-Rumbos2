@@ -1,0 +1,70 @@
+/* import axios from "axios";
+
+const API_URL = "http://localhost:8080/api/pedidos/mp/create_preference";
+
+const servicioPedidos = {
+  async getPreferenceId(carrito) {
+    try {
+      const datos = {
+        items: carrito.map((p) => ({
+          nombre: p.nombre,
+          cantidad: p.cantidad,
+          precio: Number(p.precio),
+        })),
+      };
+
+      const res = await axios.post(API_URL, datos);
+      return res.data.id;
+
+    } catch (error) {
+      console.error("ERROR getPreferenceId:", error);
+      throw error;
+    }
+  },
+};
+
+export default servicioPedidos; */
+
+
+
+/* import axios from "axios";
+
+const produccion = import.meta.env.MODE === 'production';
+const URL = produccion
+    ? "/api/pedidos/"
+    : "http://localhost:8080/api/pedidos/";
+
+export const getPreferenceId = async (carrito) => {
+    try {
+        const response = await axios.post(URL + "mp/create_preference", {
+            items: carrito
+        });
+
+        console.log("Preferencia:", response.data);
+        return response.data.url;
+    } catch (error) {
+        console.error("ERROR getPreferenceId:", error.response?.data || error);
+        throw error;
+    }
+}; */
+
+import axios from "axios";
+
+const produccion = import.meta.env.MODE === "production";
+const URL = produccion
+  ? "/api/pedidos/"
+  : "http://localhost:8080/api/pedidos/";
+
+export const getPreferenceId = async (carrito) => {
+  try {
+    const response = await axios.post(URL + "mp/create_preference", {
+      items: carrito
+    });
+
+    console.log("Preferencia:", response.data);
+    return response.data.url;
+  } catch (error) {
+    console.error("ERROR getPreferenceId:", error.response?.data || error);
+    throw error;
+  }
+};

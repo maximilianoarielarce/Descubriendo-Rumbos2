@@ -1,0 +1,163 @@
+.valija-hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(260px, 0.82fr) minmax(380px, 1.18fr);
+    align-items: center;
+    width: min(1280px, calc(100% + 3em));
+    min-height: 410px;
+    margin: 0 -1.5em;
+    padding: 2.8em max(1.5em, calc((100% - 1160px) / 2));
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at 78% 50%, rgba(201, 122, 61, 0.18), transparent 29%),
+        linear-gradient(112deg, #e7eef4 0%, #f6f1e8 54%, #e8efe9 100%);
+    isolation: isolate;
+}
+
+.valija-hero::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-image: repeating-linear-gradient(153deg, transparent 0 38px, rgba(30, 79, 123, 0.045) 39px, transparent 40px 76px);
+    content: '';
+    pointer-events: none;
+}
+
+.valija-copy {
+    position: relative;
+    z-index: 1;
+    max-width: 450px;
+    padding: 0.5em 0;
+    animation: valija-copy-in 650ms ease-out both;
+}
+
+.valija-eyebrow {
+    display: block;
+    margin-bottom: 0.75em;
+    color: var(--color-accent-dark);
+    font-size: 0.76em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.valija-copy h2 {
+    margin-bottom: 0.38em;
+    font-size: clamp(2.25em, 3.7vw, 3.35em);
+    line-height: 1.04;
+}
+
+.valija-copy p {
+    max-width: 370px;
+    margin-bottom: 1.5em;
+    color: var(--color-ink-soft);
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.valija-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65em;
+    min-height: 46px;
+    padding: 0.75em 1.15em;
+    border: 0;
+    border-radius: var(--radius-md);
+    background: var(--color-accent);
+    color: #fff;
+    font: 600 0.94em var(--font-body);
+    cursor: pointer;
+    transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.valija-toggle:hover {
+    transform: translateY(-2px);
+    background: var(--color-accent-dark);
+}
+
+.valija-toggle:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+.valija-scene {
+    width: 100%;
+    height: 370px;
+    min-width: 0;
+    cursor: grab;
+    touch-action: none;
+    animation: valija-scene-in 800ms 120ms ease-out both;
+}
+
+.valija-scene.is-dragging {
+    cursor: grabbing;
+}
+
+.valija-scene canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes valija-copy-in {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes valija-scene-in {
+    from { opacity: 0; transform: translateX(18px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@media (max-width: 760px) {
+    .valija-hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 2.2em 1.4em 2em;
+        text-align: center;
+    }
+
+    .valija-copy {
+        max-width: 520px;
+        margin: 0 auto;
+    }
+
+    .valija-copy h2 {
+        font-size: 2.45em;
+    }
+
+    .valija-copy p {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .valija-scene {
+        height: 290px;
+        margin-top: -0.8em;
+    }
+}
+
+@media (max-width: 380px) {
+    .valija-hero {
+        padding-right: 0.75em;
+        padding-left: 0.75em;
+    }
+
+    .valija-copy h2 {
+        font-size: 2.1em;
+    }
+
+    .valija-scene {
+        height: 260px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .valija-copy,
+    .valija-scene {
+        animation: none;
+    }
+
+    .valija-toggle {
+        transition: none;
+    }
+}
