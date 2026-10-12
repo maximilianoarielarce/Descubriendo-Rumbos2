@@ -9,8 +9,8 @@
     padding: 2.8em max(1.5em, calc((100% - 1160px) / 2));
     overflow: hidden;
     background:
-        radial-gradient(ellipse at 78% 50%, rgba(201, 122, 61, 0.18), transparent 29%),
-        linear-gradient(112deg, #e7eef4 0%, #f6f1e8 54%, #e8efe9 100%);
+        radial-gradient(ellipse at 78% 50%, rgba(201, 122, 61, 0.08), transparent 29%),
+        #ffffff;
 }
 
 .valija-hero::before {

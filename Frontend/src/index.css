@@ -2,7 +2,7 @@
    Descubriendo Rumbos — Design tokens
    ============================================ */
 :root {
-    --color-bg: #FBF7F1;
+    --color-bg: #FFFFFF;
     --color-surface: #FFFFFF;
     --color-ink: #1C2B3A;
     --color-ink-soft: #52606F;
@@ -89,7 +89,6 @@ header {
     top: 0;
     z-index: 50;
     background-color: var(--color-surface);
-    box-shadow: 0 1px 0 var(--color-line);
 }
 
 /* En la home el header scrollea junto con la página (como Despegar),
@@ -164,9 +163,7 @@ header nav ul li.navbar-item-admin a:hover {
 #barra-busqueda {
     width: 100%;
     padding: 2.6em 1em 3.2em;
-    background:
-        radial-gradient(ellipse at top, rgba(30, 79, 123, 0.08), transparent 60%),
-        var(--color-bg);
+    background: var(--color-bg);
     display: flex;
     flex-direction: column;
     align-items: center;
