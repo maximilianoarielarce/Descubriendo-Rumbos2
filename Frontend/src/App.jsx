@@ -115,7 +115,7 @@ function Encabezado({ adminAccessVisible, onToggleAdminAccess }) {
   }
 
   return (
-    <header>
+    <header className={esHome ? 'header-home' : undefined}>
       <Navbar mostrarAccesoAdmin={adminAccessVisible} />
 
       <div className="logo-contenedor">

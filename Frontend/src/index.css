@@ -92,6 +92,12 @@ header {
     box-shadow: 0 1px 0 var(--color-line);
 }
 
+/* En la home el header scrollea junto con la página (como Despegar),
+   así la valija 3D baja unificada con el resto del contenido */
+header.header-home {
+    position: static;
+}
+
 header nav {
     background-color: var(--color-nav);
     display: flex;

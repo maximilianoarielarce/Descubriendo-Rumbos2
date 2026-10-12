@@ -11,12 +11,10 @@
     background:
         radial-gradient(ellipse at 78% 50%, rgba(201, 122, 61, 0.18), transparent 29%),
         linear-gradient(112deg, #e7eef4 0%, #f6f1e8 54%, #e8efe9 100%);
-    isolation: isolate;
 }
 
 .valija-hero::before {
     position: absolute;
-    z-index: -1;
     inset: 0;
     background-image: repeating-linear-gradient(153deg, transparent 0 38px, rgba(30, 79, 123, 0.045) 39px, transparent 40px 76px);
     content: '';
